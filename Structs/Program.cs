@@ -28,9 +28,11 @@ namespace Structs
         struct Weapon
         {
             // when you don't put "public" it defaults to "private"
-            int durability;
+            public string name;
+            public int durability;
             public int strength;
-            int speed;
+            public int speed;
+            public bool sharp;
         }
 
         //different weapons, each has the struct
@@ -51,7 +53,21 @@ namespace Structs
 
         static void Main(string[] args)
         {
+            sword.name = "Sword";
             sword.strength = 50;
+            sword.speed = 10;
+            sword.durability = 98;
+            sword.sharp = true;
+
+            Console.WriteLine("Weapon: " + sword.name);
+            Console.WriteLine();
+            Console.WriteLine("Strength: " + sword.strength);
+            Console.WriteLine();
+            Console.WriteLine("Speed: " + sword.speed);
+            Console.WriteLine();
+            Console.WriteLine("Durability: " + sword.durability);
+            Console.WriteLine();
+            Console.WriteLine("Sharp? " + sword.sharp);
 
             Console.ReadKey(true);
         }
